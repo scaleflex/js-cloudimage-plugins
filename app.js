@@ -7,6 +7,30 @@
    -------------------------------------------------------------------------- */
 const PLUGINS = [
   {
+    id: 'js-cloudimage-3d-view',
+    name: '3D View',
+    version: '1.0.0',
+    tagline: 'Interactive 3D product visualization',
+    description:
+      'Display 3D models with smooth rotation, zoom, autoplay, and fullscreen support. Touch-friendly with drag controls and inertia.',
+    icon: 'icon-3d',
+    accentColor: '#e05cff',
+    features: [
+      '3D Models',
+      'Touch & Drag',
+      'Zoom',
+      'Autoplay',
+      'Fullscreen',
+      'Responsive',
+      'Lazy Loading',
+      'Accessibility',
+    ],
+    links: {
+      demo: 'https://scaleflex.github.io/js-cloudimage-3d-view/',
+      repo: 'https://github.com/scaleflex/js-cloudimage-3d-view',
+    },
+  },
+  {
     id: 'js-cloudimage-360-view',
     name: '360 View',
     version: '4.3.5',
@@ -85,6 +109,36 @@ const PLUGINS = [
    -------------------------------------------------------------------------- */
 function getPluginIllustration(pluginId) {
   const illustrations = {
+    'js-cloudimage-3d-view': `
+      <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="3D product visualization illustration">
+        <!-- 3D cube wireframe -->
+        <polygon points="100,20 160,55 160,105 100,140 40,105 40,55" stroke="url(#grad-3d)" stroke-width="2" opacity="0.3" fill="none"/>
+        <line x1="100" y1="20" x2="100" y2="80" stroke="url(#grad-3d)" stroke-width="1.5" opacity="0.2"/>
+        <line x1="160" y1="55" x2="100" y2="80" stroke="url(#grad-3d)" stroke-width="1.5" opacity="0.2"/>
+        <line x1="40" y1="55" x2="100" y2="80" stroke="url(#grad-3d)" stroke-width="1.5" opacity="0.2"/>
+        <!-- Front faces with fill -->
+        <polygon points="100,80 160,55 160,105 100,140" fill="url(#grad-3d)" opacity="0.08"/>
+        <polygon points="100,80 40,55 40,105 100,140" fill="url(#grad-3d)" opacity="0.05"/>
+        <polygon points="100,20 160,55 100,80 40,55" fill="url(#grad-3d)" opacity="0.03"/>
+        <!-- Rotation arc -->
+        <path d="M65 130 A50 20 0 0 0 135 130" stroke="url(#grad-3d)" stroke-width="1.5" opacity="0.4" fill="none" stroke-dasharray="4 3"/>
+        <path d="M130 126 L135 130 L128 133" stroke="url(#grad-3d)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+        <!-- Vertex dots -->
+        <circle cx="100" cy="20" r="3" fill="url(#grad-3d)" opacity="0.6"/>
+        <circle cx="160" cy="55" r="3" fill="url(#grad-3d)" opacity="0.6"/>
+        <circle cx="40" cy="55" r="3" fill="url(#grad-3d)" opacity="0.6"/>
+        <circle cx="100" cy="80" r="3" fill="url(#grad-3d)" opacity="0.8"/>
+        <circle cx="160" cy="105" r="3" fill="url(#grad-3d)" opacity="0.6"/>
+        <circle cx="40" cy="105" r="3" fill="url(#grad-3d)" opacity="0.6"/>
+        <circle cx="100" cy="140" r="3" fill="url(#grad-3d)" opacity="0.6"/>
+        <!-- Subtle pulse on center vertex -->
+        <circle cx="100" cy="80" r="3" stroke="url(#grad-3d)" stroke-width="1" opacity="0.2">
+          <animate attributeName="r" values="3;8;3" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.2;0.05;0.2" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <defs><linearGradient id="grad-3d" x1="0" y1="0" x2="200" y2="160"><stop stop-color="#e05cff"/><stop offset="1" stop-color="#2c99ff"/></linearGradient></defs>
+      </svg>`,
+
     'js-cloudimage-360-view': `
       <svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="360 degree rotation illustration">
         <circle cx="100" cy="80" r="70" stroke="url(#grad-360)" stroke-width="2" opacity="0.3"/>
