@@ -279,7 +279,7 @@ ul, ol {
 .hero__subtitle {
   font-size: var(--font-size-lg);
   color: var(--color-text-light-secondary);
-  max-width: 540px;
+  max-width: 680px;
   margin: 0 auto var(--space-2xl);
   line-height: 1.7;
 }
