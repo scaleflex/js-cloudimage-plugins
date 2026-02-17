@@ -1,0 +1,11 @@
+{
+  "name": "js-cloudimage-plugins",
+  "version": "1.0.0",
+  "description": "Scaleflex Cloudimage Plugins Hub",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true
+}
